@@ -1,0 +1,39 @@
+<html>
+<head>
+<script language="javascript">
+function ValidatePAN(Obj)
+{
+if (Obj.value !="")
+	{
+	Obj.value;
+	ObjVal=Obj.value;
+	var panPAT=/^([a-zA-Z]{5})(\d{4})([a-zA-Z]{1})$/;
+if (ObjVal.search(panPAT)==-1)
+		{	
+			alert("Invalid Pan no.");
+			Obj.focus();
+			return false;
+		}
+	}
+}
+</script>
+</head>
+<body>
+<h1><center>CUSTOMER ACCOUNT DETAILS</h1>
+
+<form>
+<center>
+<pre>
+NAME OF CUSTOMER<input type="text">
+NAME OF BANK<input type="text">
+ACCOUNT NO.<input type="text" maxlength=11>
+PAN NUMBER OF CUSTOMER<input type="text" ID="textPanNo" MaxLength="10" onblur="ValidatePAN(this);">
+
+</pre>
+<input type="submit" value="submit">
+</form>
+</center>
+</body>
+</html>
+
+
